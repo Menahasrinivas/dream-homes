@@ -1,0 +1,141 @@
+/* ================= HEADER / TOP BAR ================= */
+.top-bar{
+  background:#0f2c59;
+  font-size:14px;
+  color:#fff;
+  text-align:center;
+  padding:6px 0;
+}
+
+/* ================= NAVBAR ================= */
+.custom-navbar{
+  background:linear-gradient(90deg,#0f2c59,#1e4d92);
+  padding:10px 0;
+}
+
+/* Logo */
+.logo-img{
+  height:70px;
+  width:auto;
+  object-fit:contain;
+}
+
+/* Alignment */
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-nav,
+.custom-navbar .nav-item{
+  display:flex;
+  
+}
+.navbar-toggler{
+  margin-left:auto;
+}
+
+/* Nav links */
+.custom-navbar .nav-link{
+  color:#fff;
+  font-weight:500;
+  margin-left:20px;
+  position:relative;
+  padding:8px 0;
+}
+
+/* Underline hover */
+.custom-navbar .nav-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  width:0;
+  height:1.5px;
+  background:#facc15;
+  opacity:0;
+  transition:0.3s;
+}
+
+.custom-navbar .nav-link:hover::after{
+  width:100%;
+  opacity:1;
+}
+
+/* Active link */
+.custom-navbar .nav-link.active{
+  color:#facc15;
+}
+
+/* Enquire button */
+.enquire-btn{
+  background:#facc15;
+  color:#0f2c59;
+  padding:8px 22px;
+  border-radius:30px;
+  font-weight:600;
+  border:none;
+}
+
+.enquire-btn:hover{
+  background:#fff;
+}
+
+/* Dropdown */
+.dropdown-menu{
+  border:none;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= MOBILE OFFCANVAS ================= */
+.offcanvas{
+  background:linear-gradient(180deg,#0f2c59,#1e4d92);
+  overflow-y:auto;   /* scroll smooth */
+}
+
+.offcanvas .nav-link{
+  color:#fff;
+  padding:12px 0;
+}
+
+/* Width fix */
+.offcanvas-end{
+  width:80%;
+  max-width:300px;
+}
+
+/* BODY ALIGNMENT FIX (IMPORTANT) */
+.offcanvas-body{
+  padding:20px 25px;
+  display:flex;
+  flex-direction:column;
+ 
+}
+
+/* Remove UL bottom gap */
+.offcanvas-body .navbar-nav{
+  margin-bottom:0;
+  gap:10px;
+}
+
+/* Enquire button bottom stick */
+.offcanvas-body .mt-auto{
+  margin-top:25px !important;   /* instead of auto */
+  padding-bottom:10px;
+}
+
+/* Toggle icon white */
+.navbar-toggler-icon{
+  filter:brightness(0) invert(1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .logo-img{
+    height:45px;
+  }
+
+  .top-bar{
+    font-size:12px;
+    padding:5px 0;
+  }
+}
+
+

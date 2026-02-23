@@ -1,0 +1,372 @@
+/* GLOBAL */
+body{
+  font-family:'Poppins',sans-serif;
+}
+
+/* HERO */
+.hero,
+.hero-slide{
+  height:100vh;
+}
+
+/* Buttons */
+.btn-gold{
+  background:blue;
+  color:#fff;
+  border:none;
+  transition:0.4s;
+}
+.btn-gold:hover{
+  background:#a8873f;
+  transform:scale(1.05);
+}
+
+/* ABOUT */
+.about-img{
+  height:500px;
+  width:100%;
+  object-fit:cover;
+}
+
+/* WHY SECTION */
+.why-section{
+  background:linear-gradient(135deg,#eaf3ff,#f7fbff);
+}
+
+.section-title{
+  font-size:34px;
+  color:#0a1f44;
+}
+
+.section-subtitle{
+  max-width:700px;
+  margin:auto;
+  color:#555;
+}
+
+.why-card{
+  background:#fff;
+  padding:18px;
+  border-radius:20px;
+  margin-bottom:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.why-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+.why-img{
+  height:350px;
+  object-fit:cover;
+}
+
+/* ICON */
+.icon-circle{
+  width:50px;
+  height:50px;
+  background:linear-gradient(90deg,#2563eb,#06b6d4);
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+}
+
+/* ZOOM */
+.zoom-slow{
+  transition:transform 6s ease;
+}
+.why-image-wrapper:hover .zoom-slow{
+  transform:scale(1.08);
+}
+
+/* PROJECTS */
+.project-card{
+  height:100%;
+  border:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s ease;
+}
+.project-card img{
+  height:260px;
+  width:100%;
+  object-fit:cover;
+}
+.project-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
+/* CTA */
+.cta-section{
+  height:40vh;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+             url('/images/cta.webp');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* STATS */
+.stats-section{
+  background:linear-gradient(90deg,#0f2c59,#1e4d92);
+}
+.stat-box{
+  padding:30px 20px;
+  transition:0.3s;
+}
+.stat-box:hover{
+  transform:translateY(-8px);
+}
+.stat-icon{
+  width:70px;
+  height:70px;
+  margin:auto;
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#facc15;
+}
+.counter{
+  font-size:42px;
+  font-weight:700;
+  color:#e0f2fe;
+}
+.stat-box p{
+  color:#e0f2fe;
+}
+
+/* ================= VISION ================= */
+.vision-section{
+  background:#f5f6f8;
+  padding:110px 0;
+}
+
+.vision-wrapper{
+  position:relative;
+  padding:18px;
+  border-radius:25px;
+  border:2px solid #d6d6d6;
+  background:#fff;
+}
+
+.vision-img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.vision-badge{
+  position:absolute;
+  top:69%;
+  right:-40px;
+  transform:translateY(-50%);
+  width:170px;
+  height:170px;
+  background:#e8e3d8;
+  border-radius:50%;
+  border:8px solid #fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.vision-family{
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:-10px;
+  top:calc(60% + 95px);
+  border-radius:22px;
+  overflow:hidden;
+  border:8px solid #fff;
+}
+
+.vision-family img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.vision-content{
+  padding-left:50px;
+}
+
+.vision-content h2{
+  font-size:38px;
+  margin-bottom:25px;
+}
+
+.vision-btn{
+  background:#7b5b34;
+  color:#fff;
+  border-radius:6px;
+  padding:12px 30px;
+  border:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .vision-img{
+    height:400px;
+  }
+  .vision-content{
+    padding-left:0;
+    margin-top:100px;
+    text-align:center;
+  }
+  .vision-badge{
+    right:15px;
+    bottom:30px;
+    width:120px;
+    height:120px;
+  }
+  .vision-family{
+    width:130px;
+    height:130px;
+    right:50%;
+    bottom:-50px;
+    transform:translateX(50%);
+  }
+}
+
+/* SECTION BG */
+.testimonial-section{
+  padding:100px 0;
+  background:linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+             url('/images/testimonial-bg.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+/* LEFT TEXT */
+.testimonial-tag{
+  color:#8b6b3d;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.testimonial-title{
+  font-size:40px;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.line{
+  width:60px;
+  height:2px;
+  background:#8b6b3d;
+}
+
+/* CARD */
+.testimonial-card{
+  background:#8b6b3d;
+  color:white;
+  padding:30px;
+  border-radius:16px;
+  position:relative;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+/* Speech bubble arrow */
+.testimonial-card::after{
+  content:"";
+  position:absolute;
+  bottom:-12px;
+  left:30px;
+  border-width:12px;
+  border-style:solid;
+  border-color:#8b6b3d transparent transparent transparent;
+}
+
+/* Hover */
+.testimonial-card:hover{
+  transform:translateY(-8px);
+}
+
+/* Name */
+.testimonial-card h6{
+  margin-top:20px;
+  font-weight:600;
+}
+
+.testimonial-card span{
+  font-size:14px;
+  opacity:0.8;
+}/* SECTION BG */
+.testimonial-section{
+  padding:100px 0;
+  background:linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+             url('/images/testimonial.webp');
+  background-size:cover;
+  background-position:center;
+}
+
+/* LEFT TEXT */
+.testimonial-tag{
+  color:#8b6b3d;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.testimonial-title{
+  font-size:40px;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.line{
+  width:60px;
+  height:2px;
+  background:#8b6b3d;
+}
+
+/* CARD */
+.testimonial-card{
+  background:#8b6b3d;
+  color:white;
+  padding:30px;
+  border-radius:16px;
+  position:relative;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+/* Speech bubble arrow */
+.testimonial-card::after{
+  content:"";
+  position:absolute;
+  bottom:-12px;
+  left:30px;
+  border-width:12px;
+  border-style:solid;
+  border-color:#8b6b3d transparent transparent transparent;
+}
+
+/* Hover */
+.testimonial-card:hover{
+  transform:translateY(-8px);
+}
+
+/* Name */
+.testimonial-card h6{
+  margin-top:20px;
+  font-weight:600;
+}
+
+.testimonial-card span{
+  font-size:14px;
+  opacity:0.8;
+}
