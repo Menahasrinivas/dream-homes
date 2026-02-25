@@ -8,10 +8,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/projectdetails.css">
+ <link rel="stylesheet" href="../includes/header.css">
+  <link rel="stylesheet" href="../includes/footer.css">
 
 </head>
 <body>
-
+<div id="header"></div>
 <!-- HERO -->
 <section class="project-hero">
   <div class="container">
@@ -92,60 +94,77 @@
   </div>
 </section>
 
-
 <!-- MAIN SECTION -->
 <section class="py-5 bg-light">
-<div class="container">
-<div class="row g-5">
+<div class="container-fluid px-0">
 
-   
-<!-- ================= LEFT CONTENT ================= -->
-<div class="col-lg-8">
+<div class="row gx-0">
+
+<!-- FULL CONTENT -->
+<div class="col-lg-12 px-lg-5 px-3">
 
 <!-- FLOOR PLANS -->
 <h3 class="section-title">Floor Plans</h3>
 
 <div class="row g-4 mb-4">
-  <div class="col-md-6">
-    <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=1200&q=80"
-    class="img-fluid rounded-4 zoom-hover">
-    <p class="fw-semibold mt-2">2 BHK - 950 Sq.ft</p>
+
+  <!-- Card 1  -->
+  <div class="col-md-6 col-lg-3">
+    <img src="/images/floor1.jpg"  onclick="openLightbox(this.src)"
+      class="img-fluid rounded-4 zoom-hover floor-img">
+    <p class="fw-semibold mt-2 text-center">2 BHK - 950 Sq.ft</p>
   </div>
 
-  <div class="col-md-6">
-    <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200"
-    class="img-fluid rounded-4 zoom-hover">
-    <p class="fw-semibold mt-2">3 BHK - 1180 Sq.ft</p>
+  <!-- Card 2  -->
+  <div class="col-md-6 col-lg-3">
+    <img src="/images/floor2.jpg"  onclick="openLightbox(this.src)"
+      class="img-fluid rounded-4 zoom-hover floor-img">
+    <p class="fw-semibold mt-2 text-center">2.5 BHK - 1050 Sq.ft</p>
   </div>
+
+  <!-- Card 3  -->
+  <div class="col-md-6 col-lg-3">
+    <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200"  onclick="openLightbox(this.src)"
+      class="img-fluid rounded-4 zoom-hover floor-img">
+    <p class="fw-semibold mt-2 text-center">3 BHK - 1180 Sq.ft</p>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-md-6 col-lg-3">
+    <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1200"  onclick="openLightbox(this.src)"
+      class="img-fluid rounded-4 zoom-hover floor-img">
+    <p class="fw-semibold mt-2 text-center">3.5 BHK - 1350 Sq.ft</p>
+  </div>
+
 </div>
 
 <a href="#" class="btn btn-gold mb-5">
-<i class="fa fa-download"></i> Download Floor Plan PDF
+  <i class="fa fa-download"></i> Download Floor Plan PDF
 </a>
 
 <!-- AVAILABILITY -->
 <div class="availability-wrapper mt-5 p-5 rounded-4">
 
 <h3 class="section-title text-center text-white mb-5">
-Availability & Prices
+Book Your Dream Home
 </h3>
 
 <div class="row g-4 justify-content-center">
 
 <div class="col-md-6">
   <div class="premium-card">
-    <div class="price-tag">2 BHK</div>
+    <div class="price-tag">2 BHK - Starts From</div>
     <h3 class="my-3 price-amount">₹ 62 Lakhs</h3>
-    <p>950 Sq.ft | North Facing</p>
+    <p>950 Sq.ft</p>
     <button class="btn btn-gold mt-3">Enquire Now</button>
   </div>
 </div>
 
 <div class="col-md-6">
   <div class="premium-card">
-    <div class="price-tag">3 BHK</div>
+    <div class="price-tag">3 BHK - Starts From</div>
     <h3 class="my-3 price-amount">₹ 78 Lakhs</h3>
-    <p>1180 Sq.ft | South Facing</p>
+    <p>1180 Sq.ft </p>
     <button class="btn btn-gold mt-3">Enquire Now</button>
   </div>
 </div>
@@ -153,46 +172,76 @@ Availability & Prices
 </div>
 </div>
 
-<!-- PROJECT STATUS -->
+<!-- PROJECT STATUS WITH REAL IMAGES -->
 <section class="status-section py-5">
-<h2 class="text-center fw-bold mb-5 section-title">
-Project Plan / Status
-</h2>
+<h2 class="section-title text-center mb-5">Project Construction Status</h2>
 
 <div class="row g-4">
 
-<div class="col-md-6">
-  <div class="premium-status-card">
-    <div class="premium-img">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1400">
+<!-- FOUNDATION -->
+<div class="col-lg-3 col-md-6">
+  <div class="status-img-card">
+    <div class="status-img">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600" onclick="openLightbox(this.src)" alt="Foundation Work">
     </div>
-    <div class="premium-content">
-      <h5>Foundation Work</h5>
-      <div class="progress-wrapper">
-        <span>Completed</span>
-        <span class="percent">90%</span>
+    <div class="status-content">
+      <h5>Foundation</h5>
+      <p>Strong foundation work completed with safety standards.</p>
+      <div class="progress">
+        <div class="progress-bar" style="width:100%"></div>
       </div>
-      <div class="progress premium-progress">
-        <div class="progress-bar" style="width:90%"></div>
-      </div>
+      <span class="status-label complete">Completed</span>
     </div>
   </div>
 </div>
 
-<div class="col-md-6">
-  <div class="premium-status-card">
-    <div class="premium-img">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400">
+<!-- STRUCTURE -->
+<div class="col-lg-3 col-md-6">
+  <div class="status-img-card">
+    <div class="status-img">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1600"onclick="openLightbox(this.src)"  alt="Structure Work">
     </div>
-    <div class="premium-content">
-      <h5>Structure Work</h5>
-      <div class="progress-wrapper">
-        <span>Ongoing</span>
-        <span class="percent">75%</span>
-      </div>
-      <div class="progress premium-progress">
+    <div class="status-content">
+      <h5>Structure</h5>
+      <p>Building structure work progressing smoothly.</p>
+      <div class="progress">
         <div class="progress-bar" style="width:75%"></div>
       </div>
+      <span class="status-label ongoing">Ongoing</span>
+    </div>
+  </div>
+</div>
+
+<!-- FINISHING -->
+<div class="col-lg-3 col-md-6">
+  <div class="status-img-card">
+    <div class="status-img">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600"onclick="openLightbox(this.src)"  alt="Finishing Work">
+    </div>
+    <div class="status-content">
+      <h5>Finishing</h5>
+      <p>Interior finishing and painting work in progress.</p>
+      <div class="progress">
+        <div class="progress-bar" style="width:40%"></div>
+      </div>
+      <span class="status-label pending">Upcoming</span>
+    </div>
+  </div>
+</div>
+
+<!-- HANDOVER -->
+<div class="col-lg-3 col-md-6">
+  <div class="status-img-card">
+    <div class="status-img">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600"onclick="openLightbox(this.src)"  alt="Handover">
+    </div>
+    <div class="status-content">
+      <h5>Handover</h5>
+      <p>Final inspection and customer possession stage.</p>
+      <div class="progress">
+        <div class="progress-bar" style="width:10%"></div>
+      </div>
+      <span class="status-label pending">Upcoming</span>
     </div>
   </div>
 </div>
@@ -201,12 +250,12 @@ Project Plan / Status
 </section>
 
 <!-- 360 TOUR -->
-<section class="py-5">
-<h2 class="text-center fw-bold mb-4">360° Virtual Tour</h2>
-<div class="ratio ratio-16x9 rounded-4 shadow-lg">
-<iframe src="https://www.youtube.com/embed/9T9eJ8Y7C7I"
-allowfullscreen></iframe>
-</div>
+<section class="py-2">
+  <h2 class="text-center fw-bold mb-4">360° Virtual Tour</h2>
+
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/9T9eJ8Y7C7I" allowfullscreen></iframe>
+  </div>
 </section>
 
 <!-- GALLERY -->
@@ -215,17 +264,19 @@ allowfullscreen></iframe>
 
 <div class="row g-4">
 
-<div class="col-md-6">
+<!-- CARD 1 -->
+<div class="col-lg-3 col-md-6">
   <div class="project-gallery-card">
     <div class="gallery-img">
-      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=1600"
-      onclick="openLightbox(this.src)">
+     <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1600&q=80"
+onclick="openLightbox(this.src)">
       <span class="gallery-badge">Luxury Living</span>
     </div>
   </div>
 </div>
 
-<div class="col-md-6">
+<!-- CARD 2 -->
+<div class="col-lg-3 col-md-6">
   <div class="project-gallery-card">
     <div class="gallery-img">
       <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1600"
@@ -235,15 +286,40 @@ allowfullscreen></iframe>
   </div>
 </div>
 
+<!-- CARD 3 -->
+<div class="col-lg-3 col-md-6">
+  <div class="project-gallery-card">
+    <div class="gallery-img">
+      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1600"
+      onclick="openLightbox(this.src)">
+      <span class="gallery-badge">Kitchen Area</span>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-lg-3 col-md-6">
+  <div class="project-gallery-card">
+    <div class="gallery-img">
+      <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=1600"
+      onclick="openLightbox(this.src)">
+      <span class="gallery-badge">Exterior View</span>
+    </div>
+  </div>
+</div>
+
 </div>
 </section>
 
 </div>
+</div>
+</div>
+</section>
 
 
 
 <!-- ================= RIGHT SIDEBAR ================= -->
-<div class="col-lg-4 project-sidebar">
+<!-- <div class="col-lg-4 project-sidebar">
 
 <div class="enquire-box">
 <h4>Enquire Now</h4>
@@ -252,8 +328,8 @@ allowfullscreen></iframe>
 <button class="btn btn-light w-100 mt-3">Book Visit</button>
 </div>
 
-<!-- Completed Project Card -->
-<a href="/projects/completed.html" class="sidebar-card">
+<!Completed Project Card -->
+<!-- <a href="/projects/completed.html" class="sidebar-card">
 <div class="sidebar-img">
 <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1600">
 </div>
@@ -261,10 +337,10 @@ allowfullscreen></iframe>
 <h6>Completed Projects</h6>
 <p>Explore our delivered properties</p>
 </div>
-</a>
+</a> -->
 
 <!-- Upcoming Project Card -->
-<a href="/projects/upcoming.html" class="sidebar-card">
+<!-- <a href="/projects/upcoming.html" class="sidebar-card">
 <div class="sidebar-img">
 <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=80" class="img-fluid">
 </div>
@@ -272,34 +348,87 @@ allowfullscreen></iframe>
 <h6>Upcoming Projects</h6>
 <p>Discover future developments</p>
 </div>
-</a>
+</a> -->
 
+<!-- </div>
 </div>
+</div>
+</section> -->
 
-</div>
-</div>
-</section>
+<!-- LIGHTBOX MODAL -->
+<div class="modal fade" id="lightboxModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0 position-relative">
 
-<!-- LIGHTBOX -->
-<div class="modal fade" id="lightboxModal">
-<div class="modal-dialog modal-dialog-centered modal-lg">
-<div class="modal-content bg-dark">
-<div class="modal-body text-center">
-<img id="lightboxImage" class="img-fluid">
-</div>
-</div>
-</div>
+      <!-- CLOSE BUTTON -->
+      <button type="button"
+        class="btn-close btn-close-white position-absolute"
+        style="top:15px; right:15px; z-index:9999;"
+        data-bs-dismiss="modal"></button>
 
-</div>
+      <div class="modal-body text-center p-2">
+        <img id="lightboxImage" class="img-fluid zoom-animation">
+      </div>
 
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- PUSH TO TOP -->
+<button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-function openLightbox(src){
-document.getElementById("lightboxImage").src=src;
-new bootstrap.Modal(document.getElementById('lightboxModal')).show();
-}
+/* AOS */
+AOS.init({ duration:1200, once:true });
+
+/* HEADER FOOTER FETCH */
+fetch("../header.html")
+  .then(r=>r.text())
+  .then(d=>document.getElementById("header").innerHTML=d);
+
+fetch("../footer.html")
+  .then(r=>r.text())
+  .then(d=>document.getElementById("footer").innerHTML=d);
+
+
+
+/* PUSH TO TOP */
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+topBtn.onclick = function(){
+  window.scrollTo({ top:0, behavior:"smooth" });
+};
 </script>
 
+<script>
+const lightboxModal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+
+function openLightbox(src){
+  const img = document.getElementById("lightboxImage");
+
+  img.src = src;
+  img.classList.remove("zoom-animation");
+
+  setTimeout(()=>{
+    img.classList.add("zoom-animation");
+  },50);
+
+  lightboxModal.show();
+}
+</script>
 </body>
 </html>

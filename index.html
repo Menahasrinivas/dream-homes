@@ -27,7 +27,7 @@
 <section class="hero position-relative">
 
   <!-- Carousel Background -->
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
 
     <div class="carousel-inner">
 
@@ -41,7 +41,7 @@
           <div class="container">
             <h1 class="display-4 fw-bold">Best Quality Construction</h1>
             <p class="lead mt-3">Delivering Excellence With Premium Standards</p>
-            <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a>
+            <!-- <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a> -->
           </div>
 
         </div>
@@ -57,7 +57,7 @@
           <div class="container">
             <h1 class="display-4 fw-bold">Customer Satisfaction</h1>
             <p class="lead mt-3">Your Happiness Is Our Greatest Achievement</p>
-            <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a>
+            <!-- <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a> -->
           </div>
 
         </div>
@@ -73,7 +73,7 @@
           <div class="container">
             <h1 class="display-4 fw-bold">Luxurious Lifestyle</h1>
             <p class="lead mt-3">Experience Comfort, Elegance & Prestige</p>
-            <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a>
+            <!-- <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a> -->
           </div>
 
         </div>
@@ -89,7 +89,7 @@
           <div class="container">
             <h1 class="display-4 fw-bold">Transparent Documentation</h1>
             <p class="lead mt-3">Trust, Clarity & Legal Assurance At Every Step</p>
-            <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a>
+            <!-- <a href="#" class="btn btn-gold mt-4 px-4 py-2">Explore Projects</a> -->
           </div>
 
         </div>
@@ -136,7 +136,7 @@
         <div class="vision-content">
 
           <h2 class="fw-bold mb-3">
-            Driven by Quality & Trust
+            About dream home
           </h2>
 
           <p class="text-muted">
@@ -309,23 +309,25 @@
       </div>
 
       <div class="col-md-3 col-6 mb-4">
-        <h2 class="counter" data-target="1000">0</h2>
+        <h2 class="counter" data-target="1000">900</h2>
         <p>Happy Clients</p>
       </div>
 
       <div class="col-md-3 col-6 mb-4">
-        <h2 class="counter" data-target="5">0</h2>
+        <h2 class="counter" data-target="2">0</h2>
         <p>Countries</p>
       </div>
 
       <div class="col-md-3 col-6 mb-4">
-        <h2 class="counter" data-target="500">0</h2>
+        <h2 class="counter" data-target="100">80</h2>
         <p>Projects Running</p>
       </div>
 
     </div>
   </div>
 </section>
+
+
 <!-- PROJECTS -->
 <section class="py-5">
   <div class="container text-center">
@@ -410,6 +412,13 @@
           </div>
 
         </div>
+        <!-- ✅ VIEW MORE BUTTON -->
+        <div class="text-end mt-4">
+          <a href="testimonial.html" class="btn btn-gold px-4">
+            View More Testimonials
+          </a>
+        </div>
+
       </div>
 
     </div>
@@ -435,6 +444,64 @@ AOS.init({ duration:1200, once:true });
 
 fetch("header.html").then(r=>r.text()).then(d=>document.getElementById("header").innerHTML=d);
 fetch("footer.html").then(r=>r.text()).then(d=>document.getElementById("footer").innerHTML=d);
+</script>
+<script>
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const increment = target / speed;
+
+    const updateCounter = () => {
+      const count = +counter.innerText;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    updateCounter();
+  });
+};
+
+// Scroll la visible aana start
+const statsSection = document.querySelector('.stats-section');
+
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    observer.disconnect();
+  }
+});
+
+observer.observe(statsSection);
+</script>
+</script>
+
+<button id="topBtn">↑</button>
+
+<script>
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+  if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+topBtn.onclick = function(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+};
 </script>
 
 </body>

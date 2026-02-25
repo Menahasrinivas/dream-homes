@@ -33,7 +33,7 @@
 
 /* Nav links */
 .custom-navbar .nav-link{
-  color:#fff;
+  color:#facc15;
   font-weight:500;
   margin-left:20px;
   position:relative;
@@ -58,11 +58,19 @@
   opacity:1;
 }
 
-/* Active link */
-.custom-navbar .nav-link.active{
-  color:#facc15;
+
+/* Prevent black click */
+.custom-navbar .nav-link:focus,
+.custom-navbar .nav-link:active{
+  color:#facc15 !important;
+  background:transparent !important;
+  box-shadow:none !important;
 }
 
+/* Active page */
+.custom-navbar .nav-link.active{
+  color:#fff;
+}
 /* Enquire button */
 .enquire-btn{
   background:#facc15;
@@ -77,11 +85,15 @@
   background:#fff;
 }
 
-/* Dropdown */
-.dropdown-menu{
-  border:none;
-  border-radius:12px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+.dropdown-item{
+  transition:0.3s;
+}
+
+.dropdown-item:hover{
+  background:linear-gradient(135deg,#1e4d92,#0f2c59);
+  color:#fff;
+  transform:translateX(4px);
+  border-radius:8px;
 }
 
 /* ================= MOBILE OFFCANVAS ================= */
@@ -138,4 +150,12 @@
   }
 }
 
-
+.brand-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #caa45f; /* gold color (change if needed) */
+  letter-spacing: 1px;
+  .brand-text {
+  font-family: "Playfair Display", serif;
+}
+}

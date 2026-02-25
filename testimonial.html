@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Dream Homes</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/testimonial.css">
+  <link rel="stylesheet" href="includes/header.css">
+<link rel="stylesheet" href="includes/footer.css">
+</head>
+<body>
+<div id="header"></div>
+  <!-- HERO BANNER -->
+  <section class="page-banner text-center text-white">
+    <div class="container">
+        
+      <h1>Testimonials</h1>
+      <p>What Our Happy Clients Say</p>
+    </div>
+  </section>
+
+  <section class="testimonial-section py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- CARD 1 IMAGE -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+        <div class="testimonial-card">
+         <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="">
+          <div class="testimonial-text">
+            <p>I moved into this apartment recently and I’m genuinely impressed 
+                with the builder’s transparency and commitment. 
+                The layout is thoughtfully designed and every space is used efficiently. 
+                The separate salt and sweet water tanks show their practical planning.</p>
+            <h5>Arun Kumar</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 VIDEO -->
+      <div class="col-lg-4 col-md-6 mb-4"  data-aos="zoom-in">
+        <div class="testimonial-card video-card">
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            frameborder="0" allowfullscreen></iframe>
+          <div class="testimonial-text">
+            <p>I stay in "The Sun" apartment since a month. Builder is Trust worthy and Honest.
+                 Well thought and planned the apartment.
+                 He has created two tanks separately for Salt and sweet
+                  water for efficient water management which is the one I liked about.</p>
+            <h5>Priya S</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 IMAGE -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-left">
+        <div class="testimonial-card">
+        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716" alt="Home Buyers">
+          <div class="testimonial-text">
+            <p>From construction quality to finishing, everything reflects professionalism.
+                 The builder has clearly focused on comfort and long-term usability. 
+                Water management with dual tanks is a smart feature that adds real value.</p>
+            <h5>Rahul</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 VIDEO -->
+      <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up">
+        <div class="testimonial-card video-card">
+       <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"
+            frameborder="0" allowfullscreen></iframe>
+          <div class="testimonial-text">
+            <p>Living here for the past few weeks has been a pleasant experience.
+                 The apartment design is modern yet functional.
+                 I appreciate the honest approach of the builder and the 
+                 attention given to basic necessities like water storage.</p>
+            <h5>Meena</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 IMAGE -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+        <div class="testimonial-card">
+         <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="">
+          <div class="testimonial-text">
+            <p>The project stands out for its well-planned structure and reliable construction. 
+                The builder has ensured convenience for residents through
+                 practical solutions like separate water tanks and proper ventilation.</p>
+            <h5>Karthik</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 VIDEO -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-left">
+        <div class="testimonial-card video-card">
+          <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw"
+            frameborder="0" allowfullscreen></iframe>
+          <div class="testimonial-text">
+            <p>I’m happy with my decision to choose this apartment.
+                 The builder’s integrity and thoughtful planning are clearly visible. 
+                The infrastructure, especially the water system setup,
+                 makes daily living smooth and hassle-free.</p>
+            <h5>Sneha</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <div id="footer"></div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    
+AOS.init({ duration:1200, once:true });
+
+fetch("../header.html").then(r=>r.text()).then(d=>document.getElementById("header").innerHTML=d);
+fetch("../footer.html").then(r=>r.text()).then(d=>document.getElementById("footer").innerHTML=d);
+</script>
+<script>
+fetch("header.html")
+.then(r=>r.text())
+.then(data=>{
+  document.getElementById("header").innerHTML = data;
+
+  /* ACTIVE LINK SCRIPT */
+  const currentPage = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if(linkPage === currentPage){
+      link.classList.add("active");
+    }
+  });
+
+  /* PROJECTS dropdown parent highlight */
+  if(currentPage.includes("current") || currentPage.includes("completed") || currentPage.includes("upcoming")){
+    document.querySelectorAll(".dropdown-toggle").forEach(drop=>{
+      if(drop.innerText.trim() === "Projects"){
+        drop.classList.add("active");
+      }
+    });
+  }
+
+});
+
+fetch("footer.html").then(r=>r.text()).then(d=>document.getElementById("footer").innerHTML=d);
+</script>
+</body>
+</html>
