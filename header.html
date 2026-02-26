@@ -1,8 +1,8 @@
 <!-- ================= HEADER ================= -->
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <!-- TOP BAR -->
 <div class="top-bar text-white py-2">
-  <div class="container d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-end align-items-center">
     <div class="small">
       📞 +91 98765 43210 &nbsp; | &nbsp; ✉ info@demohomes.com
     </div>
@@ -19,11 +19,12 @@
 <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
   <div class="container">
 
-   <!-- LOGO -->
-<a class="navbar-brand d-flex align-items-center" href="index.html">
-  <img src="/images/logo4.png" class="logo" alt="logo">
-  <span class="brand-text ms-2">Dream Home</span>
-</a>
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/images/logo4.png" class="logo" alt="logo">
+      <span class="brand-text">Dream Home</span>
+    </a>
+
     <!-- TOGGLER -->
     <button class="navbar-toggler border-0 shadow-none"
             type="button"
@@ -35,21 +36,32 @@
     <!-- DESKTOP MENU -->
     <div class="collapse navbar-collapse d-none d-lg-flex">
       <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/aboutus.html">About</a></li>
 
-      <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="projects/current-projects.html">Current Projects</a></li>
-    <li><a class="dropdown-item" href="projects/completed-projects.html">Completed Projects</a></li>
-    <li><a class="dropdown-item" href="projects/upcomming-projects.html">Upcoming Projects</a></li>
-  </ul>
-</li>
-         <li class="nav-item">
-  <a class="nav-link" href="/testimonial.html">Testimonials</a>
-</li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus.html">About</a>
+        </li>
+
+        <!-- PROJECTS DROPDOWN -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/projects/current-projects.html">Current Projects</a></li>
+            <li><a class="dropdown-item" href="/projects/completed-projects.html">Completed Projects</a></li>
+            <li><a class="dropdown-item" href="/projects/upcomming-projects.html">Upcoming Projects</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/testimonial.html">Testimonials</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
 
         <li class="nav-item ms-lg-4">
           <a href="#" class="btn enquire-btn">Enquire Now</a>
@@ -58,6 +70,7 @@
     </div>
   </div>
 </nav>
+
 <!-- MOBILE OFFCANVAS -->
 <div class="offcanvas offcanvas-end text-white" tabindex="-1" id="mobileMenu">
 
@@ -69,19 +82,33 @@
   <div class="offcanvas-body d-flex flex-column">
 
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="/aboutus.html">About</a></li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus.html">About</a>
+      </li>
+
+      <!-- MOBILE PROJECTS -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
         <ul class="dropdown-menu">
-         <li><a class="dropdown-item" href="current-projects.html">Current Projects</a></li>
-<li><a class="dropdown-item" href="completed-projects.html">Completed Projects</a></li>
-<li><a class="dropdown-item" href="upcoming-projects.html">Upcoming Projects</a></li>
+          <li><a class="dropdown-item" href="/projects/current-projects.html">Current Projects</a></li>
+          <li><a class="dropdown-item" href="/projects/completed-projects.html">Completed Projects</a></li>
+          <li><a class="dropdown-item" href="/projects/upcomming-projects.html">Upcoming Projects</a></li>
         </ul>
       </li>
-       <li class="nav-item"><a class="nav-link active" href="testimonial.html">Testimonial</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/testimonial.html">Testimonials</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+
     </ul>
 
     <div class="mt-auto pt-3">
