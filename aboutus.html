@@ -79,29 +79,11 @@
 <!-- JS -->
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+<script src="js/main.js"></script>
 <script>
 AOS.init({ duration:1200, once:true });
 
-window.addEventListener("DOMContentLoaded", () => {
-fetch("header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
 
-    // 👉 VERY IMPORTANT (dropdown re-init)
-    const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
-    dropdownElementList.forEach(el => {
-      new bootstrap.Dropdown(el);
-    });
-  });
-
-fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-  });
-});
 </script>
 </body>
 </html>

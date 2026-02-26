@@ -19,7 +19,32 @@ body{
   text-align:center;
   padding:20px;
 }
+.highlight-list {
+  list-style-type: none !important;  /* bullet remove */
+  padding-left: 0;
+  margin-left: 0;
+}
 
+.highlight-list li::marker {
+  content: "";   /* extra safety */
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.lightbox-arrow.left { left: 10px; }
+.lightbox-arrow.right { right: 10px; }
 /* PROJECT STATUS NEW */
 .status-card{
   background:#fff;
