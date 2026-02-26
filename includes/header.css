@@ -3,14 +3,21 @@
   background:#0f2c59;
   font-size:14px;
   color:#fff;
-  text-align:center;
   padding:6px 0;
-}
+  text-align: right;
 
+}
+.top-bar .container{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:12px;
+}
 /* ================= NAVBAR ================= */
 .custom-navbar{
   background:#0a2f5c;
   box-shadow:0 4px 18px rgba(0,0,0,0.15);
+   padding:3px 0;
 }
 .custom-navbar:hover{
   box-shadow:0 8px 30px rgba(0,0,0,0.25);
@@ -21,7 +28,7 @@
 }
 /* Logo */
 .logo-img{
-  height:70px;
+  height:50px;
   margin-right:-2px;
   transition:.3s;
 }
@@ -51,7 +58,7 @@
   font-weight:500;
   margin-left:20px;
   position:relative;
-  padding:8px 0;
+  padding:5px 0;
   transition:.3s;
 }
 
@@ -175,6 +182,9 @@
     padding:5px 0;
   }
 }
+.custom-navbar{
+    padding:2px 0;
+  }
 
 .brand-text {
   font-size: 18px;
@@ -185,8 +195,10 @@
 }
 @media(max-width:768px){
   .top-bar .container{
-    justify-content:flex-end;  
-    font-size:12px;
+ 
+    display:flex;
+    justify-content:flex-end;
     gap:10px;
+    font-size:12px;
   }
 }
