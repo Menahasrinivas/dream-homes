@@ -1,6 +1,6 @@
 /* HERO */
 .page-banner{
-  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600&auto=format&fit=crop")
+  background: url("https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1600&q=80")
     center/cover no-repeat;
   background-size:cover;
   background-position:center;
@@ -70,7 +70,19 @@
   background:#0f2c59;
   transform:translateY(-4px);
 }
+.client-details{
+  font-size:14px;
+  color:#9ca3af;   /* mild grey color */
+  margin-top:5px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
 
+.client-details i{
+  color:#b0b8c1;   /* icon also light */
+  margin-right:4px;
+}
 /* MOBILE */
 @media(max-width:768px){
   #topBtn{
