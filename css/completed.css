@@ -1,7 +1,7 @@
 .completed-hero{
 height:70vh;
 background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800');
+url('/images/completed-banner.webp');
 background-size:cover;
 background-position:center;
 display:flex;

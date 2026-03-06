@@ -8,7 +8,7 @@ background:#f4f7fb;
 .upcoming-hero{
 height:65vh;
 background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1800');
+url('/images/upcomming-banner.webp');
 background-size:cover;
 background-position:center;
 display:flex;

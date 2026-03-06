@@ -1,32 +1,70 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
 /* ================= GLOBAL ================= */
 body{
   font-family:'Poppins',sans-serif;
   background:#f8f9fb;
 }
 
+
 /* ================= HERO ================= */
+
 .project-hero{
+  position:relative;
   height:80vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800');
-  background-size:cover;
-  background-position:center;
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
   text-align:center;
   padding:20px;
+  overflow:hidden;
 }
+
+/* Background Image */
+
+.hero-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:1;
+  filter:brightness(0.35);
+}
+
+/* Text Content */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* OTHER CSS */
+
 .highlight-list {
-  list-style-type: none !important;  /* bullet remove */
+  list-style-type: none !important;  
   padding-left: 0;
   margin-left: 0;
 }
 
 .highlight-list li::marker {
-  content: "";   /* extra safety */
+  content: ""; 
 }
 
 .lightbox-arrow {
@@ -166,73 +204,90 @@ body{
   color:white;
   transform:translateY(-3px);
 }
+/* WRAPPER */
 
-/* ================= AVAILABILITY ================= */
 .availability-wrapper{
-  background:
-  linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-  url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80');
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  padding:80px 0;
+  position:relative;
+  overflow:hidden;
 }
+
+/* BACKGROUND IMAGE */
+
+.availability-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.5);
+  z-index:1;
+}
+
+/* CONTENT ABOVE IMAGE */
+
+.availability-content{
+  position:relative;
+  z-index:2;
+}
+
+/* CARDS */
 
 .premium-card{
   background:rgba(255,255,255,0.12);
-  backdrop-filter:blur(2px);
+  backdrop-filter:blur(6px);
   border:1px solid rgba(255,255,255,0.25);
   border-radius:25px;
   padding:40px 30px;
   text-align:center;
   color:white;
   transition:0.4s;
+  min-width:300px;
+  flex-shrink:0;
 }
-
 .premium-card:hover{
-  transform:translateY(-15px);
-  box-shadow:0 35px 90px rgba(0,0,0,0.5);
+  transform:scale(1.08);
 }
-
 .price-amount{
   font-size:32px;
   font-weight:700;
   color:#facc15;
 }
+
+/* SLIDER */
+
 .availability-slider{
-overflow:hidden;
-width:100%;
+  overflow:hidden;
+  width:100%;
 }
 
 .availability-track{
-display:flex;
-gap:30px;
-width:max-content;
-animation:availabilityScroll 25s linear infinite;
-}
-
-.availability-track .premium-card{
-min-width:300px;
-flex-shrink:0;
+  display:flex;
+  gap:30px;
+  width:max-content;
+  animation:availabilityScroll 12s linear infinite;
 }
 
 /* STOP ON HOVER */
 
 .availability-track:hover{
-animation-play-state: paused;
+  animation-play-state: paused;
 }
+
+/* CAROUSEL ANIMATION */
 
 @keyframes availabilityScroll{
 
-0%{
-transform:translateX(0);
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
 }
 
-100%{
-transform:translateX(-50%);
-}
-
-}
 .video-wrapper{
   width:100%;
   max-width:900px;   /* center la small width */
@@ -286,7 +341,7 @@ transform:translateX(-50%);
 }
 
 .premium-img img{
-  width:110%;
+  width:100%;
   height:100%;
   object-fit:cover;
   transition:0.6s ease;
