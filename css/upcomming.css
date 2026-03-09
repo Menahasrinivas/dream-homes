@@ -64,6 +64,9 @@ overflow:hidden;
 box-shadow:0 25px 70px rgba(0,0,0,0.12);
 transition:0.5s ease;
 background:white;
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
 .upcoming-card:hover{
@@ -105,6 +108,10 @@ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 .upcoming-content{
 padding:30px;
 text-align:center;
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .upcoming-content h5{
@@ -142,6 +149,7 @@ font-weight:600;
 border-radius:30px;
 padding:8px 25px;
 transition:0.4s;
+margin-top:auto;
 }
 
 .btn-book:hover{
